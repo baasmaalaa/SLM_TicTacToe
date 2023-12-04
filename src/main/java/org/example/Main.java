@@ -2,7 +2,7 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world123!");
+        System.out.println("Test for J-Unit!");
     }
 
 }
