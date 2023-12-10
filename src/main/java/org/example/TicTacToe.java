@@ -16,9 +16,11 @@ public class TicTacToe {
         board = new Board();
     }
 
+    // Methode, um das Spiel zu starten
     public void start() {
         Scanner in = new Scanner(System.in);
 
+        // Solange es keinen Gewinner gibt und das Spielfeld nicht voll ist
         while (!hasWinner() && !board.isFull()) {
             board.print();
             System.out.println("Spieler " + currentPlayer.getMarker() + ", bitte wähle eine Zelle (1-9):");
@@ -54,6 +56,7 @@ public class TicTacToe {
         }
     }
 
+    // Methode, um den aktuellen Spieler zu wechseln
     public void switchCurrentPlayer() {
         // Wenn der aktuelle Spieler der erste Spieler ist, wird es auf den zweiten Spieler gesetzt
         if (currentPlayer == player1) {
@@ -64,6 +67,7 @@ public class TicTacToe {
         }
     }
 
+    // Methode, um den aktuellen Spieler zu wechseln
     public boolean hasWinner() {
         // Überprüft, ob es eine horizontale, vertikale oder diagonale Reihe von drei gleichen Zeichen gibt
         for (int i = 0; i < 3; i++) {
@@ -86,5 +90,4 @@ public class TicTacToe {
         }
         return false; //wenn kein Gewinner gibt
     }
-
 }
