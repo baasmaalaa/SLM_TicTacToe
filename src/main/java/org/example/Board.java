@@ -15,15 +15,6 @@ public class Board {
         System.out.println(" " + cells[2][0] + " | " + cells[2][1] + " | " + cells[2][2]);
         System.out.println();
     }
-    public void clear() {
-        // Durchlaufe alle Zellen des Spielfelds
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                // Setze jede Zelle auf ein Leerzeichen
-                cells[i][j] = ' ';
-            }
-        }
-    }
 
     // Methode, um zu überprüfen, ob eine Zelle leer ist
     public boolean isCellEmpty(int x, int y) {
@@ -34,5 +25,29 @@ public class Board {
     public void place(int x, int y, char marker) {
         // Setzt das Zeichen in die Zelle
         cells[x][y] = marker;
+    }
+
+    // Methode, um zu überprüfen, ob das Spielfeld voll ist
+    public boolean isFull() {
+        // Durchlaufe alle Zellen des Spielfelds
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                // Wenn eine Zelle leer ist, ist das Spielfeld nicht voll
+                if (isCellEmpty(i, j)) {
+                    return false;
+                }
+            }
+        }
+        // Alle Zellen sind belegt, das Spielfeld ist voll
+        return true;
+    }
+    public void clear() {
+        // Durchlaufe alle Zellen des Spielfelds
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                // Setze jede Zelle auf ein Leerzeichen
+                cells[i][j] = ' ';
+            }
+        }
     }
 }
