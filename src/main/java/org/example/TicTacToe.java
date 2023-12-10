@@ -37,6 +37,15 @@ public class TicTacToe {
         }
     }
 
+    public void switchCurrentPlayer() {
+        // Wenn der aktuelle Spieler der erste Spieler ist, wird es auf den zweiten Spieler gesetzt
+        if (currentPlayer == player1) {
+            currentPlayer = player2;
+        } else {
+            // Wenn der aktuelle Spieler der zweite Spieler ist, wird es auf den ersten Spieler gesetzt
+            currentPlayer = player1;
+        }
+    }
 
     public boolean hasWinner() {
         // Überprüft, ob es eine horizontale, vertikale oder diagonale Reihe von drei gleichen Zeichen gibt
