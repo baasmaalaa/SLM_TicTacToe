@@ -23,6 +23,7 @@ public class TicTacToe {
             board.print();
             System.out.println("Spieler " + currentPlayer.getMarker() + ", bitte wähle eine Zelle (1-9):");
 
+            // Eingabe des Spielers wird hier eingelesen
             int input = 0;
             try {
                 String s = in.nextLine();
@@ -32,6 +33,22 @@ public class TicTacToe {
 
             } catch (NumberFormatException e) {
                 System.out.println("Ungültige Eingabe. Bitte gib eine Zahl zwischen 1 und 9 ein.");
+                continue;
+            }
+            if (input < 1 || input > 9) {
+                System.out.println("Ungültige Eingabe. Bitte gib eine Zahl zwischen 1 und 9 ein.");
+                continue;
+            }
+
+            //die Koordinaten der Zelle basierend auf Eingabe wird berechnet
+            int x = (input - 1) / 3;
+            int y = (input - 1) % 3;
+
+            if (board.isCellEmpty(x, y)) {
+                board.place(x, y, currentPlayer.getMarker());
+                switchCurrentPlayer();
+            } else {
+                System.out.println("Diese Zelle ist nicht frei. Bitte wähle eine andere Zelle.");
                 continue;
             }
         }
