@@ -24,4 +24,10 @@ public class Board {
             }
         }
     }
+
+    // Methode, um zu überprüfen, ob eine Zelle leer ist
+    public boolean isCellEmpty(int x, int y) {
+        // Überprüfe, ob die Zelle ein Leerzeichen enthält
+        return cells[x][y] == ' ';
+    }
 }
