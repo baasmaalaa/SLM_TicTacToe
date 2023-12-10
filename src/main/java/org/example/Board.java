@@ -30,4 +30,9 @@ public class Board {
         // Überprüfe, ob die Zelle ein Leerzeichen enthält
         return cells[x][y] == ' ';
     }
+
+    public void place(int x, int y, char marker) {
+        // Setzt das Zeichen in die Zelle
+        cells[x][y] = marker;
+    }
 }
