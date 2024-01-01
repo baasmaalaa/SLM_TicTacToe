@@ -3,7 +3,7 @@ package org.example;
 import junit.framework.TestCase;
 import org.junit.Test;
 
-public class TicTacToeTest extends TestCase {
+public class TicTacToeTest {
 
     @Test
     public void testStart() {

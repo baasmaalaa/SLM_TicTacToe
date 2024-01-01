@@ -1,9 +1,11 @@
 package org.example;
 
-import junit.framework.TestCase;
 
-public class PlayerTest extends TestCase {
+import org.junit.Test;
 
+public class PlayerTest {
+
+    @Test
     public void testGetMarker() {
     }
 }
