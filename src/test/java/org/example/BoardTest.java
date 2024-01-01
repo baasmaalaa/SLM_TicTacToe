@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 public class BoardTest {
 
     @Test
-    public void print() {
+    public void testPrint() {
         // Arrange
         Board board = new Board(); // Replace YourClass with the actual class name
         ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
@@ -28,7 +28,7 @@ public class BoardTest {
     }
 
     @Test
-    public void isCellEmpty() {
+    public void testIsCellEmpty() {
         // Arrange
         Board board = new Board(); // Replace YourClass with the actual class name
 
@@ -38,14 +38,14 @@ public class BoardTest {
     }
 
     @Test
-    public void place() {
+    public void testPlace() {
     }
 
     @Test
-    public void isFull() {
+    public void testIsFull() {
     }
 
     @Test
-    public void clear() {
+    public void testClear() {
     }
 }
