@@ -9,6 +9,22 @@ public class TicTacToe {
     private Player currentPlayer;
     private Board board;
 
+    public Player getPlayer1() {
+        return player1;
+    }
+
+    public Player getPlayer2() {
+        return player2;
+    }
+
+    public Player getCurrentPlayer() {
+        return currentPlayer;
+    }
+
+    public Board getBoard() {
+        return board;
+    }
+
     public TicTacToe() {
         player1 = new Player('X');
         player2 = new Player('O');
