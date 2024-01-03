@@ -22,10 +22,12 @@ public class BoardTest {
         // Assert
         String lineSeperator = System.lineSeparator();
         String expectedOutput = String.format("|   |  %s---+---+---%s   |   |  %s---+---+---%s   |   |",lineSeperator,lineSeperator,lineSeperator,lineSeperator);
+        String unExpectedOutput = String.format("|   |  %s---+---+---%s   |    |  %s---+---+---%s   |   |",lineSeperator,lineSeperator,lineSeperator,lineSeperator);
         assertEquals(expectedOutput, outputStreamCaptor.toString().trim());
+        assertNotEquals(unExpectedOutput,outputStreamCaptor.toString().trim());
 
         // Reset System.out to its original state
-        System.setOut(System.out);
+        //System.setOut(System.out);
     }
 
     @Test
