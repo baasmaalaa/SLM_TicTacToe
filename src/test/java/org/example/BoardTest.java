@@ -30,6 +30,7 @@ public class BoardTest {
         //System.setOut(System.out);
     }
 
+
     @Test
     public void testIsCellEmpty() {
         // Arrange
