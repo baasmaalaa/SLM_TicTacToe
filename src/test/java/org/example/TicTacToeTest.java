@@ -65,7 +65,15 @@ public class TicTacToeTest {
                 "   |   |  %s" +
                 "%s" +
                 "Spieler X, bitte wähle eine Zelle (1-9):%s" +
-                "7",lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator);
+                "7%s" +
+                "%s" +
+                " X | O |  %s" +
+                "---+---+---%s" +
+                " X | O |  %s" +
+                "---+---+---%s" +
+                " X |   |  %s" +
+                "%s" +
+                "Glückwunsch! Spieler X hat gewonnen!",lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator);
 
         String unexpectedOutput = String.format("|   |  %s" +
                 "---+---+---%s" +
@@ -110,8 +118,15 @@ public class TicTacToeTest {
                 "   |   |  %s" +
                 "%s" +
                 "Spieler X, bitte wähle eine Zelle (1-9):%s" +
-                "7",lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator);
-
+                "7%s" +
+                "%s" +
+                " X | O |  %s" +
+                "---+---+---%s" +
+                " X | O |  %s" +
+                "---+---+---%s" +
+                " X |   |  %s" +
+                "%s" +
+                "Glückwunsch! Spieler X hat gewonnen!",lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator);
 
         TicTacToe game = new TicTacToe();
         game.start();
