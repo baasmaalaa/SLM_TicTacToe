@@ -42,6 +42,21 @@ public class BoardTest {
 
     @Test
     public void testPlace() {
+        Board board = new Board();
+        ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStreamCaptor));
+
+        // Act
+        board.place(0,1,'X');
+        board.print();
+
+        // Assert
+        String lineSeperator = System.lineSeparator();
+        String expectedOutput = String.format("| X |  %s---+---+---%s   |   |  %s---+---+---%s   |   |",lineSeperator,lineSeperator,lineSeperator,lineSeperator);
+        String unExpectedOutput = String.format("| O |  %s---+---+---%s   |   |  %s---+---+---%s   |   |",lineSeperator,lineSeperator,lineSeperator,lineSeperator);
+        assertEquals(expectedOutput, outputStreamCaptor.toString().trim());
+        assertNotEquals(unExpectedOutput,outputStreamCaptor.toString().trim());
+
     }
 
     @Test
