@@ -54,6 +54,16 @@ public class TicTacToe {
                 continue;
             }
         }
+
+        board.print();
+
+        if (hasWinner()) {
+            switchCurrentPlayer();
+            System.out.println("Glückwunsch! Spieler " + currentPlayer.getMarker() + " hat gewonnen!");
+        } else {
+            System.out.println("Das Spiel ist unentschieden!");
+        }
+        in.close();
     }
 
     // Methode, um den aktuellen Spieler zu wechseln
