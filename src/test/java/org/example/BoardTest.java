@@ -90,10 +90,8 @@ public class BoardTest {
         board.place(2,0,'O');
         board.place(2,1,'X');
         board.place(2,2,'O');
-        board.clear(); // wüsste nicht, wie man das noch testen kann
+        board.clear();
         assertFalse(board.isFull());
-
-
 
     }
 }
