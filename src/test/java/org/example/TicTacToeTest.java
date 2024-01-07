@@ -14,7 +14,7 @@ public class TicTacToeTest {
 
     @Test
     public void testStart() {
-        String input = "1\n2\n4\n5\n7\n";
+        String input = "1\n2\n4\n5\n7\nn\n";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
 
@@ -73,7 +73,8 @@ public class TicTacToeTest {
                 "---+---+---%s" +
                 " X |   |  %s" +
                 "%s" +
-                "Glückwunsch! Spieler X hat gewonnen!",lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator);
+                "Glückwunsch! Spieler X hat gewonnen!%s"+
+                "Wollen Sie ein neues Spiel starten? J für Ja / N für Nein",lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator);
 
         String unexpectedOutput = String.format("|   |  %s" +
                 "---+---+---%s" +
@@ -82,9 +83,9 @@ public class TicTacToeTest {
                 "   |   |  %s" +
                 "%s" +
                 "Spieler X, bitte wähle eine Zelle (1-9):%s" +
-                "2%s" +
+                "1%s" +
                 "%s" +
-                "   | X |  %s" +
+                " X |   |  %s" +
                 "---+---+---%s" +
                 "   |   |  %s" +
                 "---+---+---%s" +
@@ -126,7 +127,8 @@ public class TicTacToeTest {
                 "---+---+---%s" +
                 " X |   |  %s" +
                 "%s" +
-                "Glückwunsch! Spieler X hat gewonnen!",lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator);
+                "Glückwunsch! Spieler X hat gewonnen!%s",lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator);
+
 
         TicTacToe game = new TicTacToe();
         game.start();
