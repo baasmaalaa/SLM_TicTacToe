@@ -8,6 +8,7 @@ public class TicTacToe {
     private Player player2;
     private Player currentPlayer;
     private Board board;
+    private boolean newGame;
 
     public Player getPlayer1() {
         return player1;
@@ -36,49 +37,72 @@ public class TicTacToe {
     public void start() {
         Scanner in = new Scanner(System.in);
 
-        // Solange es keinen Gewinner gibt und das Spielfeld nicht voll ist
-        while (!hasWinner() && !board.isFull()) {
+        // Wiederhole das Spiel so lange, bis der Spieler kein neues Spiel mehr starten möchte
+        do {
+            // Solange es keinen Gewinner gibt und das Spielfeld nicht voll ist
+            while (!hasWinner() && !board.isFull()) {
+                board.print();
+                System.out.println("Spieler " + currentPlayer.getMarker() + ", bitte wähle eine Zelle (1-9):");
+
+                // Eingabe des Spielers wird hier eingelesen
+                int input = 0;
+                try {
+                    String s = in.nextLine();
+
+                    input = Integer.parseInt(s);
+                    System.out.println(input);
+
+                } catch (NumberFormatException e) {
+                    System.out.println("Ungültige Eingabe. Bitte gib eine Zahl zwischen 1 und 9 ein.");
+                    continue;
+                }
+                if (input < 1 || input > 9) {
+                    System.out.println("Ungültige Eingabe. Bitte gib eine Zahl zwischen 1 und 9 ein.");
+                    continue;
+                }
+                // die Koordinaten der Zelle basierend auf Eingabe wird berechnet
+                int x = (input - 1) / 3;
+                int y = (input - 1) % 3;
+
+                if (board.isCellEmpty(x, y)) {
+                    board.place(x, y, currentPlayer.getMarker());
+                    switchCurrentPlayer();
+                } else {
+                    System.out.println("Diese Zelle ist nicht frei. Bitte wähle eine andere Zelle.");
+                    continue;
+                }
+            }
+
             board.print();
-            System.out.println("Spieler " + currentPlayer.getMarker() + ", bitte wähle eine Zelle (1-9):");
 
-            // Eingabe des Spielers wird hier eingelesen
-            int input = 0;
-            try {
-                String s = in.nextLine();
-
-                input = Integer.parseInt(s);
-                System.out.println(input);
-
-            } catch (NumberFormatException e) {
-                System.out.println("Ungültige Eingabe. Bitte gib eine Zahl zwischen 1 und 9 ein.");
-                continue;
-            }
-            if (input < 1 || input > 9) {
-                System.out.println("Ungültige Eingabe. Bitte gib eine Zahl zwischen 1 und 9 ein.");
-                continue;
-            }
-
-            //die Koordinaten der Zelle basierend auf Eingabe wird berechnet
-            int x = (input - 1) / 3;
-            int y = (input - 1) % 3;
-
-            if (board.isCellEmpty(x, y)) {
-                board.place(x, y, currentPlayer.getMarker());
+            if (hasWinner()) {
                 switchCurrentPlayer();
+                System.out.println("Glückwunsch! Spieler " + currentPlayer.getMarker() + " hat gewonnen!");
             } else {
-                System.out.println("Diese Zelle ist nicht frei. Bitte wähle eine andere Zelle.");
-                continue;
+                System.out.println("Das Spiel ist unentschieden!");
             }
-        }
 
-        board.print();
-
-        if (hasWinner()) {
-            switchCurrentPlayer();
-            System.out.println("Glückwunsch! Spieler " + currentPlayer.getMarker() + " hat gewonnen!");
-        } else {
-            System.out.println("Das Spiel ist unentschieden!");
-        }
+            // Frage den Spieler, ob er ein neues Spiel starten möchte
+            boolean validInput = false; // Eine Variable, um zu überprüfen, ob die Eingabe gültig ist
+            while (!validInput) { // Wiederholt die Schleife, solange die Eingabe ungültig ist
+                System.out.println("Wollen Sie ein neues Spiel starten? J für Ja / N für Nein");
+                String input = in.nextLine();
+                if (input.equalsIgnoreCase("J")) {
+                    newGame = true;
+                    validInput = true;
+                } else if (input.equalsIgnoreCase("N")) {
+                    newGame = false;
+                    validInput = true;
+                } else {
+                    System.out.println("Ungültige Eingabe. Bitte geben Sie J oder N ein.");
+                }
+            }
+            // Wenn der Spieler ein neues Spiel starten möchte, leere das Spielfeld und setze den aktuellen Spieler zurück
+            if (newGame) {
+                board.clear();
+                currentPlayer = player1;
+            }
+        } while (newGame); // Wiederhole die Schleife, solange die Variable true ist
         in.close();
     }
 
