@@ -22,56 +22,56 @@ public class TicTacToeTest {
         System.setOut(new PrintStream(outputStreamCaptor));
 
         String lineSeperator = System.lineSeparator();
-        String expectedOutput = String.format("|   |  %s" +
+        String expectedOutput = String.format("1 | 2 | 3 %s" +
                 "---+---+---%s" +
-                "   |   |  %s" +
+                " 4 | 5 | 6 %s" +
                 "---+---+---%s" +
-                "   |   |  %s" +
+                " 7 | 8 | 9 %s" +
                 "%s" +
                 "Spieler X, bitte wähle eine Zelle (1-9):%s" +
                 "1%s" +
                 "%s" +
-                " X |   |  %s" +
+                " X | 2 | 3 %s" +
                 "---+---+---%s" +
-                "   |   |  %s" +
+                " 4 | 5 | 6 %s" +
                 "---+---+---%s" +
-                "   |   |  %s" +
+                " 7 | 8 | 9 %s" +
                 "%s" +
                 "Spieler O, bitte wähle eine Zelle (1-9):%s" +
                 "2%s" +
                 "%s" +
-                " X | O |  %s" +
+                " X | O | 3 %s" +
                 "---+---+---%s" +
-                "   |   |  %s" +
+                " 4 | 5 | 6 %s" +
                 "---+---+---%s" +
-                "   |   |  %s" +
+                " 7 | 8 | 9 %s" +
                 "%s" +
                 "Spieler X, bitte wähle eine Zelle (1-9):%s" +
                 "4%s" +
                 "%s" +
-                " X | O |  %s" +
+                " X | O | 3 %s" +
                 "---+---+---%s" +
-                " X |   |  %s" +
+                " X | 5 | 6 %s" +
                 "---+---+---%s" +
-                "   |   |  %s" +
+                " 7 | 8 | 9 %s" +
                 "%s" +
                 "Spieler O, bitte wähle eine Zelle (1-9):%s" +
                 "5%s" +
                 "%s" +
-                " X | O |  %s" +
+                " X | O | 3 %s" +
                 "---+---+---%s" +
-                " X | O |  %s" +
+                " X | O | 6 %s" +
                 "---+---+---%s" +
-                "   |   |  %s" +
+                " 7 | 8 | 9 %s" +
                 "%s" +
                 "Spieler X, bitte wähle eine Zelle (1-9):%s" +
                 "7%s" +
                 "%s" +
-                " X | O |  %s" +
+                " X | O | 3 %s" +
                 "---+---+---%s" +
-                " X | O |  %s" +
+                " X | O | 6 %s" +
                 "---+---+---%s" +
-                " X |   |  %s" +
+                " X | 8 | 9 %s" +
                 "%s" +
                 "Glückwunsch! Spieler X hat gewonnen!%s"+
                 "Wollen Sie ein neues Spiel starten? J für Ja / N für Nein",lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator);
@@ -127,8 +127,8 @@ public class TicTacToeTest {
                 "---+---+---%s" +
                 " X |   |  %s" +
                 "%s" +
-                "Glückwunsch! Spieler X hat gewonnen!%s",lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator);
-
+                "Glückwunsch! Spieler X hat gewonnen!%s"+
+                "Wollen Sie ein neues Spiel starten? J für Ja / N für Nein",lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator,lineSeperator);
 
         TicTacToe game = new TicTacToe();
         game.start();
