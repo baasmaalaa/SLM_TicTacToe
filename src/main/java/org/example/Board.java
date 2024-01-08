@@ -8,11 +8,29 @@ public class Board {
     }
     public void print() {
         System.out.println();
-        System.out.println(" " + cells[0][0] + " | " + cells[0][1] + " | " + cells[0][2]);
-        System.out.println("---+---+---");
-        System.out.println(" " + cells[1][0] + " | " + cells[1][1] + " | " + cells[1][2]);
-        System.out.println("---+---+---");
-        System.out.println(" " + cells[2][0] + " | " + cells[2][1] + " | " + cells[2][2]);
+        int cellNumber = 1;
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(" ");
+                if (cells[i][j] == ' ') {
+                    System.out.print(cellNumber);
+                } else {
+                    System.out.print(cells[i][j]);
+                }
+                System.out.print(" ");
+
+                if (j < 2) {
+                    System.out.print("|");
+                }
+                cellNumber++;
+            }
+            System.out.println();
+
+            if (i < 2) {
+                System.out.println("---+---+---");
+            }
+        }
         System.out.println();
     }
 
