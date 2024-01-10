@@ -22,7 +22,7 @@ public class BoardTest {
         // Assert
         String lineSeperator = System.lineSeparator();
         String expectedOutput = String.format("1 | 2 | 3 %s---+---+---%s 4 | 5 | 6 %s---+---+---%s 7 | 8 | 9",lineSeperator,lineSeperator,lineSeperator,lineSeperator);
-        String unExpectedOutput = String.format("|   |  %s---+---+---%s   |    |  %s---+---+---%s   |   |",lineSeperator,lineSeperator,lineSeperator,lineSeperator);
+        String unExpectedOutput = String.format(" |   |  %s---+---+---%s   |    |  %s---+---+---%s   |   |",lineSeperator,lineSeperator,lineSeperator,lineSeperator);
         assertEquals(expectedOutput, outputStreamCaptor.toString().trim());
         assertNotEquals(unExpectedOutput,outputStreamCaptor.toString().trim());
 
